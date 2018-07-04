@@ -9,16 +9,32 @@ body{
 
 .search-highlight { background: yellow }
 
-.row app-contacts{
+/* .row app-contacts{
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-}
+} */
 
 .navbar-inverse {
     background-color: #3F51B5;
     border-color: #080808;
+
+}
+.card{
+    margin:10px 0;
+}
+.card img{
+    margin:0 auto
+}
+
+.h4 , h4{
+    background: #9E9E9E;
+    padding: 5px;
+    text-align: left;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
 
 }
