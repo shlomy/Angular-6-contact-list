@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    padding-top:80px;
+   
 }
 
 .form-group{
@@ -8,3 +8,17 @@ body{
 }
 
 .search-highlight { background: yellow }
+
+.row app-contacts{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.navbar-inverse {
+    background-color: #3F51B5;
+    border-color: #080808;
+
+}
