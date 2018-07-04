@@ -1,0 +1,27 @@
+
+<div class="col-xs-4 text-center" *ngFor="let user of users | filter:name:'name.first' | slice:0:[max] let  i=index">
+  <div class="card " ngClass="aaa">
+    <img *ngIf="user.gender=='male'" src="assets/images/m.jpg">
+    <img *ngIf="user.gender=='female'" src="assets/images/f.jpg">
+
+    <h4>
+      <b>{{user.name.first | highlight : filter }}</b>
+    </h4>
+    <p>{{user.email}}</p>
+
+  </div>
+
+</div> 
+
+ 
+
+<div class="col-xs-12 text-center">
+  <p>
+    <br/>
+    <button (click)="toggle()" class="btn btn-success">Show more</button>
+    
+  </p>
+</div>
+
+
+<!-- | filter:name:'name.first'  | slice:0:[max] let i=index" -->
