@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,22 +7,22 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-  @Input() name:string;
-  users=[];
+  @Input() name: string;
+  users = [];
   results: any[];
-  max:number=9
+  max: number = 9
 
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient) {
   }
 
-  toggle():void{
-    this.max+=9
+  toggle(): void {
+    this.max += 9;
   }
 
   ngOnInit(): void {
     this.http.get('https://randomuser.me/api/?results=100&format=json').subscribe(data => {
-      this.users=data['results']
-  
+      this.users = data['results']
+
     });
   }
 

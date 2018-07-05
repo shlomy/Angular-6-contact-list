@@ -6,8 +6,7 @@
     <img [src]="user.picture.large" class="img-responsive">
     <div>
       <h4>
-        <b [innerHTML]="user.name.first | highlight : name"> </b> 
-
+        <b [innerHTML]="user.name.first | highlight : name"> </b>
 
         <span *ngIf="user.gender=='male'" class="glyphicon glyphicon-king" aria-hidden="true"> </span>
         <span *ngIf="user.gender=='female'" class="glyphicon glyphicon-queen" aria-hidden="true"> </span>
