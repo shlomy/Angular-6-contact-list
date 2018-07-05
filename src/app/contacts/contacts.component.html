@@ -1,26 +1,29 @@
-
 <div class="col-sm-4 text-center" *ngFor="let user of users | filter:name:'name.first' | slice:0:[max] let  i=index">
   <div class="card ">
-    <img *ngIf="user.gender=='male'" src="assets/images/m.jpg" class="img-responsive">
-    <img *ngIf="user.gender=='female'" src="assets/images/f.jpg" class="img-responsive">
+    <!-- <img *ngIf="user.gender=='male'" src="assets/images/m.jpg" class="img-responsive">
+    <img *ngIf="user.gender=='female'" src="assets/images/f.jpg" class="img-responsive"> -->
+
+    <img [src]="user.picture.large" class="img-responsive">
     <div>
-    <h4>
-      <b [innerHTML]="user.name.first | highlight : name"></b>
-      <br/>
-      {{user.email}}
-    </h4>
-    <p></p>
+      <h4>
+        <b [innerHTML]="user.name.first | highlight : name"> </b> 
+
+
+        <span *ngIf="user.gender=='male'" class="glyphicon glyphicon-king" aria-hidden="true"> </span>
+        <span *ngIf="user.gender=='female'" class="glyphicon glyphicon-queen" aria-hidden="true"> </span>
+
+        <br/> {{user.email}}
+      </h4>
+      <p></p>
+
+    </div>
 
   </div>
-
-</div> 
 </div>
 <div class="col-xs-12 text-center">
   <p>
     <br/>
     <button (click)="toggle()" class="btn btn-success">Show more</button>
-    
+
   </p>
 </div>
-
-
