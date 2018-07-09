@@ -10,7 +10,8 @@ export class ContactsComponent implements OnInit {
   @Input() name: string;
   users = [];
   results: any[];
-  max: number = 9
+  max: number = 9;
+  color = 'yellow';
 
   constructor(private http: HttpClient) {
   }

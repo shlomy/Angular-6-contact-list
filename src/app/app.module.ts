@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FilterPipe } from './filter.pipe';
 import { HighlightPipe } from './highlight.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
     FilterPipe,
-    HighlightPipe
+    HighlightPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
